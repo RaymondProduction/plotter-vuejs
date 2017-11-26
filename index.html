@@ -25,8 +25,12 @@
     <p>y(x)=</p>
     <textarea v-model="formula" rows="10" cols="45" name="text">{{formula}}</textarea><br>
     <input v-model="start" placeholder="start of x"><br>
-    <input v-model="end" placeholder="final of x"><br>
-    <input v-model="step" placeholder="step of x"><br>
+    <input v-model="end" placeholder="final of the x"><br>
+    <input v-model="step" placeholder="step of the x"><br>
+    <input v-model="nameX" placeholder="name of the x axis"><br>
+    <input v-model="nameY" placeholder="name of the y axis"><br>
+    <input v-model="min" placeholder="min value of the y axis"><br>
+    <input v-model="max" placeholder="max value of the y axis"><br>
     <button v-on:click="f()">Plot</button><br>
     <div id="container"></div>
   </div>

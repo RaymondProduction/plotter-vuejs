@@ -7,6 +7,10 @@
           start:0,
           end: 10,
           step: 1,
+          nameY: 'Y',
+          nameX: 'X',
+          max: 100,
+          min: 0,
         }
       },
 
@@ -26,8 +30,10 @@
               text: 'Graph'
             },
             yAxis: {
+              max: this.max,
+              min: this.min,
               title: {
-                text: 'Y'
+                text: this.nameY,
               }
             },
 
@@ -36,11 +42,11 @@
                 label: {
                   connectorAllowed: false
                 },
-                pointStart: 0
+                pointStart: this.start
               }
             },
             series: [{
-              name: 'X',
+              name: this.nameX,
               data: data,
             }],
 
