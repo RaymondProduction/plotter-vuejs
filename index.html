@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plotter</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="http://underscorejs.ru/underscore-min.js"></script>
+
+  <style>
+  body{
+    position: relative;
+  }
+    #container {
+    min-width: 310px;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto
+  }
+  input {
+    clear: 'left';
+  }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <p>y(x)=</p>
+    <textarea v-model="formula" rows="10" cols="45" name="text">{{formula}}</textarea><br>
+    <input v-model="start" placeholder="start of x"><br>
+    <input v-model="end" placeholder="final of x"><br>
+    <input v-model="step" placeholder="step of x"><br>
+    <button v-on:click="f()">Plot</button><br>
+    <div id="container"></div>
+  </div>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
