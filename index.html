@@ -21,6 +21,16 @@
   </style>
 </head>
 <body>
+  <header>
+    <a href=""><img src="" alt="" class="logo"></a>
+    <nav>
+      <ul>
+        <li><a href="#">File</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </nav>
+  </header>
   <div id="app">
     <p>y(x)=</p>
     <textarea v-model="formula" rows="10" cols="45" name="text">{{formula}}</textarea><br>
@@ -34,6 +44,9 @@
     <button v-on:click="f()">Plot</button><br>
     <div id="container"></div>
   </div>
+  <footer>
+    <p>RaymondProduction © 2018</p>
+  </footer>
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/series-label.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
